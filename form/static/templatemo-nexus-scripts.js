@@ -457,5 +457,16 @@ https://templatemo.com/tm-594-nexus-flow
                 //         this.style.background = '';
                 //     }, 3000);
                 // }, 2000);
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        const p = card.querySelector('p');
+        p.style.maxHeight = p.scrollHeight + 'px'; // to‘liq balandlik
+    });
+    card.addEventListener('mouseleave', () => {
+        const p = card.querySelector('p');
+        p.style.maxHeight = '60px';
+    });
+});
+
         
         
