@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusFlow - The Future of Team Collaboration</title>
+    <link href="{% static 'templatemo-nexus-style.css' %}" rel="stylesheet">
+<!--
+
+TemplateMo 594 nexus flow
+
+https://templatemo.com/tm-594-nexus-flow
+
+-->
+</head>
+<body id="top">
+    <!-- Enhanced Background Elements -->
+    <div class="cyber-bg">
+        <div class="cyber-gradient"></div>
+        <div class="matrix-rain" id="matrixRain"></div>
+    </div>
+    
+    <div class="particles" id="particlesContainer"></div>
+    
+    <div class="data-streams" id="dataStreams"></div>
+    
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    
+    <div class="grid-overlay">
+        <div class="grid-lines"></div>
+        <div class="grid-glow"></div>
+    </div>
+    
+    <div class="scanlines"></div>
+    <div class="noise-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#top" class="logo">BookFlow</a>
+            <ul class="nav-links">
+                <li><a href="#features">Books</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Create</a></li>
+            </ul>
+            <div class="nav-bottom">
+                <a href="#" class="cyber-button">Access Terminal</a>
+            </div>
+            <button class="mobile-menu-button" id="mobileMenuBtn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#top" class="mobile-menu-logo">BookFlow</a>
+            <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+        </div>
+        <div class="mobile-menu-cta">
+            <a href="#" class="cyber-button">Access Terminal</a>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title">
+                <span class="hero-nexus">BOOK</span><span class="hero-flow">FLOW</span>
+            </h1>
+            <p class="hero-subtitle">The quantum leap in team collaboration. Connect minds, sync realities, achieve impossible.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Initialize System</a>
+                <a href="#" class="btn-secondary">View Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats fade-up" id="stats">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500M+</span>
+                    <span class="stat-label">Tasks Processed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">180+</span>
+                    <span class="stat-label">Countries</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features fade-up" id="features">
+    <div class="features-container">
+        <div class="section-header">
+            <h2 class="section-title">Books Lists</h2>
+            <p class="section-subtitle">Advanced BOOKS designed for maximum efficiency and seamless integration</p>
+        </div>
+        
+        <!-- Grid container -->
+        <div class="features-grid">
+            {% for i in books %}
+            <div class="feature-card">
+                <img src="{{ i.image.url }}" alt="" style="border-radius:10px; max-width:200px; height:auto;">
+                <h3>{{ i.title }}</h3>
+                <p>{{ i.desc }}</p>
+            </div>
+            {% empty %}
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quantum Processing</h3>
+                    <p>Experience lightning-fast data processing with our quantum-inspired algorithms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔮</div>
+                    <h3>Neural Networks</h3>
+                    <p>AI-powered decision making that learns from your team's patterns.</p>
+                </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</section>
+
+
+    <!-- Pricing Section -->
+<section class="pricing fade-up" id="pricing">
+    <div class="pricing-container">
+        <div class="section-header">
+            <h2 class="section-title">Kitob Narxlari</h2>
+            <p class="section-subtitle">Sizga mos o‘quv darajasini tanlang</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="plan-name">Boshlang‘ich</div>
+                <div class="plan-price">$9.99</div>
+                <div class="plan-period">/kitob</div>
+                <ul class="plan-features">
+                    <li>Oddiy hikoyalar va maqolalar</li>
+                    <li>PDF formatda yuklab olish</li>
+                    <li>1 oylik kirish</li>
+                    <li>Asosiy o‘quv resurslari</li>
+                    <li>Oddiy tahlil savollari</li>
+                </ul>
+                <a href="#contact" class="btn-secondary">Sotib olish</a>
+            </div>
+            
+            <div class="pricing-card featured">
+                <div class="plan-name">Standart</div>
+                <div class="plan-price">$24.99</div>
+                <div class="plan-period">/kitob</div>
+                <ul class="plan-features">
+                    <li>O‘rta darajadagi kitoblar</li>
+                    <li>Audio va PDF format</li>
+                    <li>Doimiy yangilanishlar</li>
+                    <li>Qo‘shimcha testlar</li>
+                    <li>Interaktiv tahlil sahifasi</li>
+                </ul>
+                <a href="#contact" class="btn-primary">Sotib olish</a>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="plan-name">Premium</div>
+                <div class="plan-price">$49.99</div>
+                <div class="plan-period">/kitob</div>
+                <ul class="plan-features">
+                    <li>Professional kitoblar va darsliklar</li>
+                    <li>Video darslar bilan birga</li>
+                    <li>Cheksiz yuklab olish</li>
+                    <li>Maxsus muallif bilan aloqa</li>
+                    <li>Qo‘shimcha tahlil vositalari</li>
+                    <li>PDF, EPUB va Audio formatlar</li>
+                </ul>
+                <a href="#contact" class="btn-secondary">Sotib olish</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section class="contact fade-up" id="contact">
+        <div class="contact-container">
+            <div class="section-header">
+                <h2 class="section-title">Initialize Book</h2>
+                <p class="section-subtitle">Create a Book through the neural Subscribe</p>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <div class="contact-form">
+                    <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="form-group">
+                            {{ form.title.label_tag }}
+                            {{ form.title }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.author.label_tag }}
+                            {{ form.author }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.desc.label_tag }}
+                            {{ form.desc }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.image.label_tag }}
+                            {{ form.image }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.price.label_tag }}
+                            {{ form.price }}
+                        </div>
+
+                        <button style="width: 500px; height: 55px;"  type="submit" class="cyber-btn">Create Book</button>
+                    </form>
+
+                    <style>
+                    .cyber-btn {
+                        position: relative;
+                        display: inline-block;
+                        padding: 12px 30px;
+                        color: #00fff7;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        border: 2px solid #00fff7;
+                        background: transparent;
+                        cursor: pointer;
+                        overflow: hidden;
+                        transition: 0.4s ease;
+                        font-family: 'Courier New', Courier, monospace;
+                    }
+
+                    .cyber-btn::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(120deg, #ff00ff, #00fff7, #ff00ff);
+                        transition: 0.5s;
+                        z-index: 0;
+                    }
+
+                    .cyber-btn:hover::before {
+                        left: 0;
+                    }
+
+                    .cyber-btn:hover {
+                        color: #000;
+                        box-shadow: 0 0 20px #00fff7, 0 0 40px #ff00ff, 0 0 60px #00fff7;
+                    }
+
+                    .cyber-btn > * {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    </style>
+
+                </div>
+            </div>
+        </div>
+        
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <span class="footer-separator">•</span>
+                <a href="#">Terms of Service</a>
+                <span class="footer-separator">•</span>
+                <a href="#">Documentation</a>
+                <span class="footer-separator">•</span>
+                <a href="https://tmeplatemo.com">Contact Support</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookFlow Systems. All realities reserved.</p>
+                <p class="footer-credit">Brought to you by <a href="https://templatemo.com" target="_blank" rel="noopener nofollow">Najot Talim</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'templatemo-nexus-scripts.js' %}"></script>
+</body>
+</html>
