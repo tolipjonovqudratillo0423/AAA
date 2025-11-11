@@ -3,8 +3,9 @@ from django.http import HttpRequest
 from .models import Book
 from .forms import BookForm
 def home(request):
+    data = BookForm(request.POST, request.FILES)
     if request.method == "POST":
-        data = BookForm(request.POST, request.FILES)
+        
         print("Forma yuborildi:", data.is_valid())
 
         if data.is_valid():
@@ -16,14 +17,12 @@ def home(request):
                 price=data.cleaned_data["price"],
                 is_active=data.cleaned_data["is_active"],
             )
-    else:
-        data = BookForm()
-
-    
-
+            return redirect("home")
+        else:
+            print(data.errors)
+        
     context = {
         'books':Book.objects.all(),
-        'form':BookForm()
+        'form':data
     }
-
     return render(request,'index.html',context=context)
